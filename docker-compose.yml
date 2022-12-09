@@ -1,6 +1,6 @@
 services:
   db:
-    image: duno1901/django-postgres-docker
+    image: postgres:latest
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
@@ -9,10 +9,10 @@ services:
       - POSTGRES_PASSWORD=postgres
   web:
     build: .
-    image: duno1901/django-postgres-docker
+    image: duno1901/danielvor
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/django-postgres-docker
+      - .:/danielvor
     ports:
       - "8000:8000"
     environment:
