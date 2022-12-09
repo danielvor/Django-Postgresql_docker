@@ -1,6 +1,6 @@
 services:
   db:
-    image: postgres:latest
+    image: duno1901/django-postgres-docker
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
