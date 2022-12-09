@@ -2,7 +2,7 @@
 FROM python:latest
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
-WORKDIR /code
-COPY requirements.txt /code/
+WORKDIR /django-postgres-docker
+COPY requirements.txt /django-postgres-docker/
 RUN pip install -r requirements.txt
-COPY . /code/
+COPY . /django-postgres-docker/
